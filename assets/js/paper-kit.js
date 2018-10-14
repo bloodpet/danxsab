@@ -280,7 +280,6 @@ $(document).on('click', '.navbar-toggler', pk.toggleNavBar);
 $(document).on('click', '.nav-link', function(e){
   var hash = this.hash;
   var $toggle = $(this);
-  console.log('Toggle')
   // prevent default anchor click behavior
   e.preventDefault();
   // store hash
