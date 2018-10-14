@@ -277,6 +277,7 @@ examples = {
 }
 
 $(document).on('click', '.navbar-toggler', pk.toggleNavBar);
+
 $(document).on('click', '.nav-link', function(e){
   var hash = this.hash;
   var $toggle = $(this);
@@ -292,6 +293,22 @@ $(document).on('click', '.nav-link', function(e){
     window.location.hash = hash;
   });
   pk.toggleNavBar(e);
+});
+
+$(document).on('click', '.navbar-brand', function(e){
+  var hash = this.hash;
+  var $toggle = $(this);
+  // prevent default anchor click behavior
+  e.preventDefault();
+  // store hash
+  // animate
+  $('html, body').animate({
+    scrollTop: $(hash).offset().top
+  }, 300, function(){
+    // when done, add hash to url
+    // (default click behaviour)
+    window.location.hash = hash;
+  });
 });
 
 // Returns a function, that, as long as it continues to be invoked, will not
