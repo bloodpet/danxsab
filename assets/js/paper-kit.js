@@ -295,7 +295,7 @@ $(document).on('click', '.nav-link', function(e){
   pk.toggleNavBar(e);
 });
 
-$(document).on('click', '.navbar-brand', function(e){
+$(document).on('click', '.body-link', function(e){
   var hash = this.hash;
   var $toggle = $(this);
   // prevent default anchor click behavior
